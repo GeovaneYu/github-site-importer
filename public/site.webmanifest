@@ -1,0 +1,13 @@
+{
+  "name": "Geovane Gofredo - Portfólio",
+  "short_name": "Geovane Gofredo",
+  "description": "Tech Lead de Operações e Infraestrutura de TI",
+  "icons": [
+    { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "theme_color": "#0F1419",
+  "background_color": "#FCFCF9",
+  "display": "standalone"
+}
