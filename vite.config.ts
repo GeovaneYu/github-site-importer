@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [tailwindcss(), react(), mode === "development" && componentTagger()].filter(Boolean),
+  base: '/portfolio/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
