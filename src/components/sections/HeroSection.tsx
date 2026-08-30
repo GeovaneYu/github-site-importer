@@ -56,7 +56,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-          className="relative shrink-0 translate-y-9 md:translate-y-10"
+          className="relative shrink-0 mx-auto lg:mx-0 lg:translate-y-10"
         >
             <div className="relative w-[140px] h-[140px] md:w-[150px] md:h-[150px] lg:w-[160px] lg:h-[160px]">
             <div aria-hidden="true" className="absolute -inset-2 rounded-full border border-accent/12" />
@@ -81,13 +81,13 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.18 }}
-        className="mt-3 font-mono text-xs md:text-sm leading-relaxed text-muted w-full"
+        className="mt-6 lg:mt-3 font-mono text-xs md:text-sm leading-relaxed text-muted w-full flex flex-wrap gap-x-1.5 gap-y-1"
       >
         <span className="text-accent">▸</span>{" "}
         <button onClick={() => setShowEgg(true)} className="hover:text-accent transition-colors cursor-pointer" title="clique 👀">
           Rapaz do Computador
         </button>{" "}
-        • Na minha máquina funciona • Já abriu o chamado? • CTRL+ALT+DEL
+        <span>• Na minha máquina funciona • Já abriu o chamado? • CTRL+ALT+DEL</span>
       </motion.p>
 
       <motion.div
@@ -119,11 +119,11 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.35 }}
-        className="mt-8 flex flex-nowrap items-center justify-between gap-4 border-t border-border/50 pt-5 font-mono text-xs overflow-x-auto"
+        className="mt-8 grid grid-cols-2 gap-3 md:flex md:flex-nowrap md:items-center md:justify-between md:gap-4 border-t border-border/50 pt-5 font-mono text-[11px] md:text-xs"
       >
-        <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-2 text-muted hover:text-accent transition-colors truncate">
+        <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-2 text-muted hover:text-accent transition-colors min-w-0">
           <Mail className="h-3.5 w-3.5 shrink-0 text-accent" />
-          {personalInfo.email}
+          <span className="truncate">{personalInfo.email}</span>
         </a>
         <a href={personalInfo.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-accent transition-colors">
           <WhatsAppIcon className="h-3.5 w-3.5 shrink-0 text-accent" />
@@ -133,9 +133,9 @@ export default function HeroSection() {
           <MapPin className="h-3.5 w-3.5 shrink-0 text-accent" />
           {personalInfo.location.city}
         </a>
-        <a href={`https://${personalInfo.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-accent transition-colors truncate">
+        <a href={`https://${personalInfo.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-accent transition-colors min-w-0">
           <Linkedin className="h-3.5 w-3.5 shrink-0 text-accent" />
-          @{handle}
+          <span className="truncate">@{handle}</span>
         </a>
       </motion.div>
 
