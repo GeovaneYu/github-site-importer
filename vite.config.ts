@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [tailwindcss(), react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: process.env.GITHUB_ACTIONS ? '/github-site-importer/' : '/',
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
