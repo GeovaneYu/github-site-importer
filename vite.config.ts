@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [tailwindcss(), react()],
-  base: process.env.GITHUB_ACTIONS ? '/portfolio/' : '/',
+  base: process.env.GITHUB_ACTIONS ? '/github-site-importer/' : '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
