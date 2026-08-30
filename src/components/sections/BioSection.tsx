@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Users, ShieldCheck, Globe2, Clock } from "lucide-react";
 
 const highlights = [
-  { icon: Clock, value: "14+", label: "anos em TI" },
+  { icon: Clock, value: "Mais de 14", label: "anos em TI" },
   { icon: Globe2, value: "Diversos", label: "países atendidos" },
   { icon: ShieldCheck, value: "24/7", label: "sustentação crítica" },
   { icon: Users, value: "Bilíngue", label: "suporte a times globais" },

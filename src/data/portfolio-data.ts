@@ -23,7 +23,7 @@ export const personalInfo: PersonalInfo = {
   email: "geovane.gofredo@outlook.com",
   phone: "(11) 96882-8204",
   whatsapp: `https://wa.me/5511968828204?text=${whatsappMessage}`,
-  bio: "Profissional de TI com 14+ anos em infraestrutura, suporte avançado e gestão técnica de ambientes corporativos. Atuo com administração de redes, servidores, segurança e condução de projetos de melhoria. Perfil proativo, focado em estabilidade operacional e visão estratégica para otimização de ambientes críticos. Experiência direta com cliente corporativo, assumindo responsabilidade técnica, organização do ambiente e entrega de soluções com autonomia para times globais.",
+  bio: "Profissional de TI com mais de 14 anos em infraestrutura, suporte avançado e gestão técnica de ambientes corporativos. Atuo com administração de redes, servidores, segurança e condução de projetos de melhoria. Perfil proativo, focado em estabilidade operacional e visão estratégica para otimização de ambientes críticos. Experiência direta com cliente corporativo, assumindo responsabilidade técnica, organização do ambiente e entrega de soluções com autonomia para times globais.",
   skills: "Liderança Técnica, Gestão de Incidentes, Projetos de Infraestrutura, ITSM, ITIL, Scrum, Kanban, Windows Server, AD, Linux, Proxmox, Docker, M365, Azure, Intune, Redes, Firewall, VPN",
 };
 
