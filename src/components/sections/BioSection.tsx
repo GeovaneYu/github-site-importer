@@ -29,11 +29,9 @@ export default function BioSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="rounded-xl border overflow-hidden bg-[#FFFBF5] dark:bg-[#0F1419] border-[#F0E6DD] dark:border-white/10 shadow-[0_8px_28px_-14px_rgba(185,28,46,0.18),0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-xl relative"
+        className="rounded-xl border overflow-hidden bg-[#FFFBF5] dark:bg-[#0F1419] border-[#F0E6DD] dark:border-white/10 shadow-[0_8px_28px_-14px_rgba(185,28,46,0.18),0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-xl"
       >
-        {/* sutil textura papel no light */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.035] dark:opacity-0" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")` }} />
-        <div className="relative flex items-center gap-1.5 px-4 py-3 border-b border-[#F0E6DD] dark:border-white/10 bg-white/70 dark:bg-white/[0.03] backdrop-blur-sm">
+        <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#F0E6DD] dark:border-white/10 bg-white/70 dark:bg-white/[0.03] backdrop-blur-sm">
           <span className="w-3 h-3 rounded-full bg-red-500 shadow-[0_1px_2px_rgba(0,0,0,0.15)]" />
           <span className="w-3 h-3 rounded-full bg-yellow-500 shadow-[0_1px_2px_rgba(0,0,0,0.15)]" />
           <span className="w-3 h-3 rounded-full bg-green-500 shadow-[0_1px_2px_rgba(0,0,0,0.15)]" />

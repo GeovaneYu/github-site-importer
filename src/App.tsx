@@ -10,6 +10,7 @@ import StyleGuide from "./pages/StyleGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+const basename = import.meta.env.BASE_URL;
 
 const App = () => (
   <ErrorBoundary>
@@ -18,7 +19,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter basename={import.meta.env.BASE_URL}>
+          <BrowserRouter basename={basename}>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/style-guide" element={<StyleGuide />} />
