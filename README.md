@@ -1,6 +1,6 @@
 # Portfólio — Geovane Gofredo
 
-Tech Lead de Operações e Infraestrutura de TI — mais de 14 anos entre cabo e cloud. Portfólio editorial com modo claro/escuro, animações e foco em performance.
+Tech Lead de Operações e Infraestrutura de TI — mais de 14 anos de experiência. Portfólio editorial com modo claro/escuro, animações e foco em performance.
 
 **Demo:** https://geovaneyu.github.io/resume/ · **Cartão:** [/cartao-visita.html](https://geovaneyu.github.io/resume/cartao-visita.html) · **Assinatura:** [/email-signature.html](https://geovaneyu.github.io/resume/email-signature.html)
 
@@ -51,4 +51,6 @@ Edite `src/data/portfolio-data.ts` (bio, experiências, skills) e `public/CV-*.p
 
 ## Licença
 
-Uso pessoal. Sinta-se à vontade para forkar como base para seu próprio portfólio.
+**Todos os direitos reservados — Geovane Gofredo (2026).**
+
+Proibida a cópia, reprodução, distribuição ou uso comercial sem autorização prévia por escrito. Veja [`LICENSE`](./LICENSE) para detalhes.
