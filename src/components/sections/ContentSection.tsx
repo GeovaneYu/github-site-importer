@@ -78,7 +78,7 @@ export default function ContentSection() {
             {education.map((edu) => (
               <div key={edu.id} className="border-l border-border pl-6 py-1">
                 <h3 className="text-[16px] md:text-[17px] font-semibold text-foreground leading-snug">
-                  {edu.degree} em {edu.field}
+                  {edu.field}
                 </h3>
                 <div className="font-mono text-[11px] tracking-wide text-muted mt-1.5">
                   {edu.institution} · {edu.location}

@@ -1,13 +1,13 @@
 import { personalInfo } from "@/data/portfolio-data";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Download } from "lucide-react";
+import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 export default function ContactSection() {
   const channels = [
-    { icon: Mail, label: "E-mail", value: personalInfo.email, href: `mailto:${personalInfo.email}` },
-    { icon: WhatsAppIcon, label: "WhatsApp", value: personalInfo.phone, href: personalInfo.whatsapp },
-    { icon: Linkedin, label: "LinkedIn", value: `@${personalInfo.website.split("/").pop()}`, href: `https://${personalInfo.website}` },
+    { icon: Mail, label: "E-mail", value: personalInfo.email, href: `mailto:${personalInfo.email}`, cta: "Enviar e-mail" },
+    { icon: WhatsAppIcon, label: "WhatsApp", value: personalInfo.phone, href: personalInfo.whatsapp, cta: "Chamar agora" },
+    { icon: Linkedin, label: "LinkedIn", value: `@${personalInfo.website.split("/").pop()}`, href: `https://${personalInfo.website}`, cta: "Ver perfil" },
   ];
 
   return (
@@ -21,34 +21,37 @@ export default function ContactSection() {
       >
         <h2 className="label-mono mb-6">Contato</h2>
         <p className="text-[22px] md:text-[30px] font-bold tracking-tight leading-[1.15] max-w-3xl">
-          Vamos manter <span className="text-accent">tudo no ar</span>?
+          Vamos <span className="text-accent">conversar</span>?
         </p>
         <p className="mt-3 text-[15px] leading-[1.65] text-muted max-w-2xl">
-          14 anos entre <span className="text-foreground font-medium">cabo e cloud</span> — Proxmox, Azure, redes e automação sem “na minha máquina funciona”. Entrego operação documentada e sem sustos. <span className="text-foreground font-medium">Aberto a CLT, PJ e projetos.</span>
+          Seja para uma nova oportunidade profissional, suporte técnico, manutenção ou um projeto de infraestrutura,{" "}
+          <span className="text-foreground">estou aberto a conversar</span>.
+        </p>
+        <p className="mt-2 text-[15px] leading-[1.65] text-muted max-w-2xl">
+          Conte o que você precisa e <span className="text-foreground font-medium">vamos encontrar a melhor solução</span>.
         </p>
 
-        <a
-          href="/CV-Geovane-Gofredo-2026.pdf"
-          download
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 font-mono text-xs uppercase tracking-widest text-accent-foreground shadow-sm hover:bg-accent/90 transition-colors"
-        >
-          <Download className="h-3.5 w-3.5" />
-          BAIXAR CV (PDF)
-        </a>
-
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {channels.map(({ icon: Icon, label, value, href }) => (
+          {channels.map(({ icon: Icon, label, value, href, cta }) => (
             <a
               key={label}
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group rounded-xl border border-border bg-secondary/50 p-6 transition-colors hover:border-accent/40 hover:bg-secondary"
+              className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-accent-soft/20 hover:shadow-lg hover:shadow-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              <Icon className="w-5 h-5 text-accent mb-3" aria-hidden="true" />
-              <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{label}</div>
-              <div className="mt-1.5 text-[14px] leading-snug break-all text-foreground group-hover:text-accent transition-colors">
+              <div className="flex items-center justify-between">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 ring-1 ring-accent/10 transition-all duration-300 group-hover:bg-accent group-hover:ring-accent group-hover:scale-105">
+                  <Icon className="h-5 w-5 text-accent transition-colors group-hover:text-accent-foreground" aria-hidden="true" />
+                </div>
+                <ArrowUpRight className="h-4 w-4 text-muted transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" aria-hidden="true" />
+              </div>
+              <div className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">{label}</div>
+              <div className="mt-1.5 text-[15px] font-medium leading-snug break-all text-foreground transition-colors group-hover:text-accent">
                 {value}
+              </div>
+              <div className="mt-4 inline-flex items-center gap-1.5 font-mono text-[11px] tracking-wide text-accent opacity-80 transition-all group-hover:gap-2 group-hover:opacity-100">
+                {cta} <span aria-hidden="true">→</span>
               </div>
             </a>
           ))}

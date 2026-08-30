@@ -62,9 +62,9 @@ export default function HeroSection() {
             <div aria-hidden="true" className="absolute -inset-2 rounded-full border border-accent/12" />
             <div className="relative w-full h-full overflow-hidden rounded-full border-[3px] border-accent/30 bg-surface shadow-lg">
               <picture>
-                <source srcSet="/img/geovane.webp" type="image/webp" />
+                <source srcSet={`${import.meta.env.BASE_URL}img/geovane.webp`} type="image/webp" />
                 <img
-                  src="/img/geovane.jpg"
+                  src={`${import.meta.env.BASE_URL}img/geovane.jpg`}
                   alt="Retrato de Geovane Gofredo"
                   className="h-full w-full object-cover object-top"
                   loading="eager"
@@ -97,7 +97,7 @@ export default function HeroSection() {
         className="mt-8 flex flex-wrap items-center gap-3"
       >
         <a
-          href="/CV-Geovane-Gofredo-2026.pdf"
+          href={`${import.meta.env.BASE_URL}CV-Geovane-Gofredo-2026.pdf`}
           download
           className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-accent-foreground hover:bg-accent/90 transition-colors"
         >
@@ -164,7 +164,7 @@ export default function HeroSection() {
                 <X className="w-4 h-4" />
               </button>
               <p className="font-mono text-xs uppercase tracking-widest text-accent mb-3">easter egg — suporte_</p>
-              <img src="/img/meme-menino-suporte.jpg" alt="Meme: Menino do computador é o C@#%*! Eu sou profissional de TI — SUPORTE" className="w-full rounded-xl border border-border" loading="lazy" />
+              <img src={`${import.meta.env.BASE_URL}img/meme-menino-suporte.jpg`} alt="Meme: Menino do computador é o C@#%*! Eu sou profissional de TI — SUPORTE" className="w-full rounded-xl border border-border" loading="lazy" />
               <p className="mt-3 font-mono text-xs text-muted text-center">Clique em “Rapaz do Computador” na tagline 😉</p>
             </motion.div>
           </motion.div>
