@@ -51,32 +51,36 @@ export default function NavBar() {
     >
       <nav
         aria-label="Navegação principal"
-        className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between gap-4"
+        className="max-w-7xl mx-auto px-4 md:px-12 h-16 flex items-center gap-2 md:gap-4"
       >
-        <a href="#top" className="label-mono text-foreground hover:text-accent transition-colors">
+        <a href="#top" className="shrink-0 label-mono text-foreground hover:text-accent transition-colors">
           GG<span className="text-accent">.</span>
         </a>
 
-        <div className="flex items-center gap-2 md:gap-3">
-          <ul className="flex items-center gap-1 md:gap-2">
-            {links.map((link) => (
-              <li key={link.id}>
-                <a
-                  href={`#${link.id}`}
-                  aria-current={active === link.id ? "true" : undefined}
-                  className={cn(
-                    "font-mono text-[11px] md:text-xs uppercase tracking-widest px-2 md:px-3 py-2 rounded-md transition-colors",
-                    active === link.id
-                      ? "text-accent bg-accent/10"
-                      : "text-muted hover:text-foreground"
-                  )}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ThemeToggle />
+        <div className="flex flex-1 min-w-0 items-center justify-end gap-2 md:gap-3">
+          <div className="min-w-0 flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <ul className="flex w-max flex-nowrap items-center gap-1 md:gap-2">
+              {links.map((link) => (
+                <li key={link.id} className="shrink-0">
+                  <a
+                    href={`#${link.id}`}
+                    aria-current={active === link.id ? "true" : undefined}
+                    className={cn(
+                      "inline-flex whitespace-nowrap font-mono text-[10px] md:text-xs uppercase tracking-widest px-2 md:px-3 py-2 rounded-md transition-colors",
+                      active === link.id
+                        ? "text-accent bg-accent/10"
+                        : "text-muted hover:text-foreground"
+                    )}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="shrink-0">
+            <ThemeToggle />
+          </div>
         </div>
       </nav>
     </header>
