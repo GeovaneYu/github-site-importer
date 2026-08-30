@@ -85,7 +85,7 @@ export default function HeroSection() {
       >
         <span className="text-accent">▸</span>{" "}
         <button onClick={() => setShowEgg(true)} className="hover:text-accent transition-colors cursor-pointer" title="clique 👀">
-          Rapaz do Computador
+Profissional de TI
         </button>{" "}
         <span>• Na minha máquina funciona • Já abriu o chamado? • CTRL+ALT+DEL</span>
       </motion.p>
@@ -165,7 +165,7 @@ export default function HeroSection() {
               </button>
               <p className="font-mono text-xs uppercase tracking-widest text-accent mb-3">easter egg — suporte_</p>
               <img src={`${import.meta.env.BASE_URL}img/meme-menino-suporte.jpg`} alt="Meme: Menino do computador é o C@#%*! Eu sou profissional de TI — SUPORTE" className="w-full rounded-xl border border-border" loading="lazy" />
-              <p className="mt-3 font-mono text-xs text-muted text-center">Clique em “Rapaz do Computador” na tagline 😉</p>
+              <p className="mt-3 font-mono text-xs text-muted text-center">Clique em “Profissional de TI” na tagline 😉</p>
             </motion.div>
           </motion.div>
         )}
