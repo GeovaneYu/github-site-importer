@@ -1,78 +1,54 @@
-# Welcome to your Lovable project
+# Portfólio — Geovane Gofredo
 
-## Project info
+Tech Lead de Operações e Infraestrutura de TI — mais de 14 anos entre cabo e cloud. Portfólio editorial com modo claro/escuro, animações e foco em performance.
 
-**URL**: https://lovable.dev/projects/6fd12b81-631e-49d3-83b3-86e8b3fab3ae
+**Demo:** https://geovaneyu.github.io/resume/ · **Cartão:** [/cartao-visita.html](https://geovaneyu.github.io/resume/cartao-visita.html) · **Assinatura:** [/email-signature.html](https://geovaneyu.github.io/resume/email-signature.html)
 
-## How can I edit this code?
+## Stack
 
-There are several ways of editing your application.
+- **Vite 5** + **React 18** + **TypeScript 5**
+- **Tailwind CSS 4** + **shadcn/ui** + **Framer Motion**
+- **React Router** + **next-themes** + **Lucide**
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/6fd12b81-631e-49d3-83b3-86e8b3fab3ae) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Rodar local
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/GeovaneYu/resume.git
+cd resume/portfolio
+npm install
+npm run dev      # http://localhost:8080/
+npm run build    # dist/
+npm run lint
 ```
 
-**Edit a file directly in GitHub**
+Requer Node 20+.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Estrutura
 
-**Use GitHub Codespaces**
+```
+src/
+  components/sections/  Hero, Bio, Content, Projects, Contact
+  components/ui/        shadcn
+  data/portfolio-data.ts  fonte única de conteúdo
+  pages/Index.tsx       JSON-LD + seções
+public/
+  img/                  geovane.jpg/webp, meme
+  CV-Geovane-Gofredo-2026.pdf
+  cartao-visita.html    cartão 85.6×53.98mm (public/ para Pages)
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deploy
 
-## What technologies are used for this project?
+GitHub Pages via **Actions** (`.github/workflows/deploy.yml`):
 
-This project is built with:
+- Push em `main` → `bun install` → `vite build` → `actions/deploy-pages`
+- `vite.config.ts` com `base: GITHUB_ACTIONS ? '/resume/' : '/'` — funciona em `/` (Lovable/local) e `/resume/` (Pages)
+- Habilite em **Settings → Pages → Source: GitHub Actions**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Personalização
 
-## How can I deploy this project?
+Edite `src/data/portfolio-data.ts` (bio, experiências, skills) e `public/CV-*.pdf`. Cores e tipografia em `src/index.css` (`@theme`).
 
-Simply open [Lovable](https://lovable.dev/projects/6fd12b81-631e-49d3-83b3-86e8b3fab3ae) and click on Share -> Publish.
+## Licença
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-
-# ./tailwind-plus folder:
-
-The tailwind-plus folder contains tailwind components and themes to be used as inspiration for the project. DO NOT REMOVE THE FOLDER UNLESS SPECIFICALLY TOLD TO DO SO
-# porfolio
+Uso pessoal. Sinta-se à vontade para forkar como base para seu próprio portfólio.
