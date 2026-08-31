@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [tailwindcss(), react()],
-  base: process.env.GITHUB_ACTIONS ? '/resume/' : '/',
+  base: process.env.GITHUB_ACTIONS ? '/portfolio/' : '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
